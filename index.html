@@ -99,6 +99,14 @@
             color: #888;
             text-align: center;
         }
+        .sdk-note {
+            font-size: 13px;
+            color: #666;
+            background: #f8f9fa;
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin-top: 6px;
+        }
         @media (max-width: 600px) {
             .container { padding: 20px 16px; }
             table { font-size: 12px; }
@@ -113,8 +121,8 @@
     <h1>《几何防线》隐私政策</h1>
 
     <div class="meta">
-        <strong>更新日期：</strong>2026年7月8日<br>
-        <strong>生效日期：</strong>2026年7月8日
+        <strong>更新日期：</strong>2026年7月19日<br>
+        <strong>生效日期：</strong>2026年7月19日
     </div>
 
     <p><strong>《几何防线》</strong>（以下简称“本游戏”）由<strong>“深海炸弹工作室”</strong>（以下简称“我们”）开发并运营。我们深知个人信息对您的重要性，将按照法律法规的规定，保护您的个人信息及隐私安全。本游戏是一款<strong>单机塔防游戏</strong>，但为了向您提供免费的游戏体验，我们接入了第三方广告服务。</p>
@@ -125,14 +133,15 @@
 
     <!-- ==================== 一 ==================== -->
     <h2>一、我们如何收集和使用您的个人信息</h2>
-    <p>我们根据合法、正当、必要的原则，仅会出于本政策所述的以下目的，收集和使用您的个人信息。本游戏为单机性质，我们<strong>本身不会</strong>通过游戏服务器主动收集您的个人信息，但接入的广告SDK会为了实现广告展示和效果统计而收集信息。</p>
+    <p>我们根据合法、正当、必要的原则，仅会出于本政策所述的以下目的，收集和使用您的个人信息。本游戏为单机性质，我们<strong>本身不会</strong>通过游戏服务器主动收集您的个人信息，但接入的第三方SDK会为了实现相应功能而收集信息。</p>
 
     <p><strong>1. 必要信息的收集</strong><br>
-    为了保障游戏的基本运行和广告的正常展示，我们需要在您同意本政策后，获取以下必要权限和信息：</p>
+    为了保障游戏的基本运行、广告展示及账号登录功能，我们需要在您同意本政策后，获取以下必要权限和信息：</p>
     <ul>
         <li><strong>设备信息：</strong>包括设备品牌、型号、操作系统版本、设备设置等，用于适配广告内容及游戏运行环境。</li>
         <li><strong>设备标识符：</strong>如 OAID（匿名设备标识符）、Android ID，用于生成用户唯一标识、广告归因分析及防止作弊行为。</li>
         <li><strong>网络信息：</strong>包括 IP 地址、网络类型（Wi-Fi / 5G / 4G 等），用于判断网络连接状态，确保游戏资源加载及广告内容的正常拉取。</li>
+        <li><strong>TapTap 账号信息：</strong>当您使用 TapTap 登录时，我们会获取您的 OpenID、UnionID 及昵称，用于完成登录认证及游戏内身份识别。</li>
     </ul>
 
     <p><strong>2. 存储权限（非必要）</strong><br>
@@ -151,28 +160,37 @@
 
     <!-- ==================== 二 ==================== -->
     <h2>二、我们使用的第三方 SDK</h2>
-    <p>为了实现广告功能并维持游戏的免费运营，我们集成了以下第三方广告 SDK。这些 SDK 会独立收集您的信息，详情如下：</p>
+    <p>为了实现游戏功能并维持游戏的免费运营，我们集成了以下第三方 SDK。这些 SDK 会独立收集您的信息，详情如下：</p>
 
     <table>
         <thead>
             <tr>
-                <th style="width:18%;">SDK 名称</th>
-                <th style="width:22%;">使用目的</th>
-                <th style="width:35%;">收集的个人信息</th>
+                <th style="width:16%;">SDK 名称</th>
+                <th style="width:20%;">使用目的</th>
+                <th style="width:39%;">收集的个人信息</th>
                 <th style="width:25%;">隐私政策链接</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><strong>TapADN SDK</strong></td>
+                <td><strong>友盟 U-AppWin</strong></td>
                 <td>广告投放、监测归因、反作弊</td>
-                <td>设备品牌、型号、系统版本、OAID、Android ID、IP 地址、网络状态、应用安装列表（用于防作弊）等</td>
-                <td><a href="https://ssp.dirichlet.cn/docs/agreement/" target="_blank">点击查看 TapADN 隐私政策</a></td>
+                <td>设备信息（品牌、型号、系统版本）、OAID、Android ID、IP 地址、网络状态、应用安装列表（用于防作弊）、广告交互数据</td>
+                <td><a href="https://www.umeng.com/policy" target="_blank">点击查看友盟隐私政策</a></td>
+            </tr>
+            <tr>
+                <td><strong>TapTap SDK</strong></td>
+                <td>账号登录、用户认证、合规认证</td>
+                <td>设备信息、网络状态、TapTap OpenID、UnionID、昵称、头像、手机号（如已绑定）</td>
+                <td><a href="https://www.taptap.com/privacy-policy" target="_blank">点击查看 TapTap 隐私政策</a></td>
             </tr>
         </tbody>
     </table>
 
-    <p style="font-size:14px; color:#666;"><strong>关于应用列表的说明：</strong>广告 SDK 可能会检测您的应用安装列表，这是为了识别设备环境、防止广告欺诈（如模拟器检测），并非为了窥探您的隐私。</p>
+    <div class="sdk-note">
+        <strong>关于应用列表的说明：</strong>友盟广告 SDK 可能会检测您的应用安装列表，这是为了识别设备环境、防止广告欺诈（如模拟器检测），并非为了窥探您的隐私。<br>
+        <strong>关于 TapTap 登录：</strong>TapTap SDK 仅在您主动点击“TapTap 登录”按钮时才会收集您的账号信息，用于完成登录认证。
+    </div>
 
     <!-- ==================== 三 ==================== -->
     <h2>三、Cookie 及类似技术的使用</h2>
@@ -188,6 +206,7 @@
     我们<strong>不会</strong>向任何第三方公司、组织和个人分享您的个人信息，但以下情况除外：</p>
     <ul>
         <li><strong>与广告合作伙伴共享：</strong>为了展示广告，我们会将您的设备标识符、IP 地址及广告交互数据共享给上述表格中提及的广告 SDK 合作伙伴。</li>
+        <li><strong>与登录服务提供商共享：</strong>当您使用 TapTap 登录时，您的账号信息会与 TapTap SDK 进行交互以完成认证。</li>
         <li><strong>法定情形：</strong>根据法律法规、法律程序要求，或按政府主管部门的强制性要求，我们可能会对外共享您的个人信息。</li>
     </ul>
 
@@ -201,7 +220,7 @@
     <h2>五、我们如何存储和保护您的个人信息</h2>
     <p><strong>1. 存储地点与期限</strong></p>
     <ul>
-        <li><strong>存储地点：</strong>本游戏为单机游戏，您的游戏存档主要存储在<strong>您的设备本地</strong>。广告 SDK 收集的信息依据其隐私政策，可能存储于中国大陆或境外服务器。</li>
+        <li><strong>存储地点：</strong>本游戏为单机游戏，您的游戏存档主要存储在<strong>您的设备本地</strong>。广告 SDK 和 TapTap SDK 收集的信息依据其隐私政策，可能存储于中国大陆或境外服务器。</li>
         <li><strong>存储期限：</strong>我们仅在为您提供本游戏服务所必需的<strong>最短期间</strong>内保留您的个人信息。广告数据的保留期限请参考具体 SDK 的隐私政策。</li>
     </ul>
 
@@ -215,6 +234,7 @@
         <li><strong>撤回授权：</strong>您可以在手机系统设置中关闭本游戏的存储权限，撤回您的授权。撤回后，我们可能无法继续为您提供对应的存档保存服务，但不影响您继续游戏。</li>
         <li><strong>删除本地数据：</strong>您可以通过卸载游戏或清除游戏数据的方式，删除存储在您设备本地的所有游戏存档及缓存信息。</li>
         <li><strong>关闭个性化广告：</strong>您可以在手机系统“隐私”或“广告”设置中，开启“限制广告跟踪”或重置广告标识符（OAID），以关闭个性化广告推荐。</li>
+        <li><strong>退出 TapTap 登录：</strong>您可以在游戏内设置或 TapTap 客户端中退出登录，取消授权。</li>
     </ul>
 
     <!-- ==================== 七 ==================== -->
@@ -244,4 +264,5 @@
 
 </div>
 </body>
+</html>
 </html>
